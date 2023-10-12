@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open sans', sans-serif;
+	font-weight: 500;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+.bg-lightblue {
+	background-color: #f2fdff;
+}
+
+.z-1 {
+	z-index: 2;
+}
+
+.bg-gray {
+	background-color: #ebebeb !important;
+}
+
+.bg-lightgray{
+	background-color: #fff !important;
+}
+.bg-lightgray:hover{
+	background-color: #f1f1f1 !important ;
+}
+
+.w-700px {
+	width: 500px;
+}
+
+.overflow-y-scroll {
+	overflow-y: scroll;
+}
