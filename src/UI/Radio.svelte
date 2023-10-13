@@ -14,7 +14,7 @@
 </script>
 
 {#if disabled && checked === answereId && is_correct != "1"}
-  <div class="d-flex gap-2 bg-danger text-white w-75">
+  <div class="d-flex gap-2 text-danger  w-75">
     <input
       on:click={() =>
         dispatch("userInput", {
@@ -23,7 +23,7 @@
           is_correct: is_correct,
         })}
       type="radio"
-      class="form-check-input"
+      class="form-check-input bg-danger"
       name="option"
       {disabled}
       {id}
@@ -32,7 +32,7 @@
     <label for={id}>{content}</label>
   </div>
 {:else if disabled && is_correct == "1"}
-  <div class="d-flex gap-2 bg-success text-white w-75">
+  <div class="d-flex gap-2  text-success w-75">
     <input
       on:click={() =>
         dispatch("userInput", {
@@ -41,7 +41,7 @@
           is_correct: is_correct,
         })}
       type="radio"
-      class="form-check-input"
+      class="form-check-input bg-success"
       name="option"
       {disabled}
       {id}
