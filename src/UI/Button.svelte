@@ -4,10 +4,11 @@
     export let buttonColor = "primary";
     export let buttonSize = "md";
     export let bgColor = "";
+    export let classes = "";
     export let disable = false;
 </script>
 
-<button on:click disabled={disable} class="btn bg-{bgColor} btn-{buttonColor} btn-{buttonSize} text-capitalize" type={buttonType}>
+<button on:click disabled={disable} class="btn bg-{bgColor} {classes} btn-{buttonColor} btn-{buttonSize} text-capitalize" type={buttonType}>
     {buttonName}
 </button>
 
@@ -19,4 +20,10 @@
         cursor: not-allowed !important;
         pointer-events: all;
     }
+  .floating-button{
+    position: fixed;
+    z-index: 2;
+    bottom: 20px;
+    right: 30px;
+  }
 </style>

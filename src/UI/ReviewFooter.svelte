@@ -12,20 +12,24 @@
   <div
     class="w-100 h-100 d-flex align-items-center justify-content-end p-1 px-5 gap-3 bg-white"
   >
-    <Button on:click={()=>dispatch("dashboard")} buttonName="Dashboard" buttonColor="secondary" />
+    <Button
+      on:click={() => dispatch("dashboard")}
+      buttonName="Dashboard"
+      buttonColor="secondary"
+    />
     <Button
       on:click={() => dispatch("decrement")}
       disable={questionNumber > 0 ? false : true}
       buttonName="previous"
       buttonColor="secondary"
-      />
-      <span class="btn">{questionNumber + 1} of {totalQuestions}</span>
-      <Button
+    />
+    <span class="btn">{questionNumber + 1} of {totalQuestions}</span>
+    <Button
       on:click={() => dispatch("increment")}
       buttonName="next"
       buttonColor="secondary"
-      disable={questionNumber < totalQuestions ? false : true}
-      />
+      disable={questionNumber < totalQuestions-1 ? false : true}
+    />
     <Button
       on:click={() => dispatch("result")}
       buttonName="Result"

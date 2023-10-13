@@ -67,6 +67,7 @@
     {:else if page === "result"}
       <Result
         on:reviewQues={handleReview}
+        on:dashboard={handleDashboard}
         {fetchedData}
         {results}
         {questions}

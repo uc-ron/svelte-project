@@ -4,6 +4,7 @@
 
   export let message;
   export let results;
+  export let totalQuestions;
   let unattempted = results.length;
   for (let i = 0; i < results.length; i++) {
     if (results[i]) {
@@ -28,11 +29,11 @@
     </p>
     <div class="d-flex justify-content-around align-items-center pb-5">
       <div class="d-flex flex-column text-primary badge p-3 border border-primary">
-        <h1 class="m-0 text-center fw-bold">{results.length}</h1>
+        <h1 class="m-0 text-center fw-bold">{totalQuestions}</h1>
         <p class="m-0">Items</p>
       </div>
       <div class="d-flex flex-column text-success badge p-3 border border-success">
-        <h1 class="m-0 text-center fw-bold">{results.length - unattempted}</h1>
+        <h1 class="m-0 text-center fw-bold">{totalQuestions - unattempted}</h1>
         <p class="m-0">Attempted</p>
       </div>
       <div class="d-flex flex-column text-warning badge p-3 border border-warning">

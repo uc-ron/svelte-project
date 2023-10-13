@@ -131,6 +131,7 @@
             </div>
           </li>
         {/each}
+        <Button on:click={()=>dispatch("dashboard")} classes="floating-button" buttonName="Dashboard" buttonColor="secondary" buttonType="lg" />
       </ul>
     </div>
   </div>

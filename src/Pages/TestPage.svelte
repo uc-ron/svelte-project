@@ -53,6 +53,7 @@
     on:endTest
     {results}
     {message}
+    {totalQuestions}
   />
 {/if}
 {#if sidebar}

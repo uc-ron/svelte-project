@@ -73,8 +73,8 @@
       </li>
     </ul>
     <ul class="d-flex flex-column gap-2 align-items-start p-0">
-      {#each newData as ques, i ((ques.content_id, i))}
-        <button on:click={() => dispatch("jumpTo", i)}>
+      {#each newData as ques, i (ques.content_id)}
+        <button on:click={() => dispatch("jumpTo", ques.id)}>
           <li class="d-flex gap-3 align-items-center btn">
             <div class="float-start btn-sm btn-secondary rounded-circle">
               {ques.id+1}
@@ -82,7 +82,7 @@
             <div class="d-flex flex-column gap-1 align-items-start">
               <p
                 class="{`${
-                  questionNumber === i ? 'text-primary' : 'text-secondary'
+                  questionNumber === ques.id ? 'text-primary' : 'text-secondary'
                 }`}  m-0 text-start fw-bold"
               >
                 {ques.snippet}[061bF]
