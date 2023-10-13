@@ -44,9 +44,10 @@
   }
 
   function handleDashboard(){
+    results=new Array(totalQuestions);
     page="start";
-    results=[];
   }
+  // 6PXN-UY7F-YMR7-2310:DEVDB
 </script>
 
 <Header />
