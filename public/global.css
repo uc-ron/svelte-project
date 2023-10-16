@@ -23,11 +23,12 @@ body {
 	background-color: #ebebeb !important;
 }
 
-.bg-lightgray{
+.bg-lightgray {
 	background-color: #fff !important;
 }
-.bg-lightgray:hover{
-	background-color: #f1f1f1 !important ;
+
+.bg-lightgray:hover {
+	background-color: #f1f1f1 !important;
 }
 
 .w-700px {
@@ -36,4 +37,9 @@ body {
 
 .overflow-y-scroll {
 	overflow-y: scroll;
+}
+@media (max-width:900px) {
+	.container{
+		max-width: 100% !important;
+	}
 }

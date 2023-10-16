@@ -9,7 +9,7 @@
   const dispatch = createEventDispatcher();
 
   function handleIncrement() {
-    if (questionNumber !== totalQuestions-1) {
+    if (questionNumber !== totalQuestions - 1) {
       dispatch("increment");
     } else {
       dispatch(
@@ -22,7 +22,7 @@
 
 <footer class="shadow-lg">
   <div
-    class="w-100 h-100 d-flex align-items-center justify-content-end p-1 px-5 gap-3"
+    class="w-100 h-100 d-flex align-items-center justify-content-end p-1 px-5 gap-3 footer-container"
   >
     <Watch on:endTest />
     <Button
@@ -61,5 +61,11 @@
     width: 100%;
     bottom: 0;
     border-top: 2px solid #ccc;
+  }
+  @media (max-width: 800px) {
+    .footer-container {
+      padding-right: 5px !important;
+      padding-left: 0 !important;
+    }
   }
 </style>

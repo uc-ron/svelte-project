@@ -73,37 +73,45 @@
       </li>
     </ul>
     <ul class="d-flex flex-column gap-2 align-items-start p-0">
-      {#each newData as ques, i (ques.content_id)}
-        <button on:click={() => dispatch("jumpTo", ques.id)}>
-          <li class="d-flex gap-3 align-items-center btn">
-            <div class="float-start btn-sm btn-secondary rounded-circle">
-              {ques.id+1}
-            </div>
-            <div class="d-flex flex-column gap-1 align-items-start">
-              <p
-                class="{`${
-                  questionNumber === ques.id ? 'text-primary' : 'text-secondary'
-                }`}  m-0 text-start fw-bold"
-              >
-                {ques.snippet}[061bF]
-              </p>
-              {#if ques.attempted ||( results[i]?.id && filter ==="all")}
-                <span
-                  class="rounded-pill btn btn-sm small text-success border-success"
+      {#if newData.length === 0}
+        <li class="d-flex gap-3 align-items-center btn bg-warning w-100">
+          <p class="lead">No Item Found!</p>
+        </li>
+      {:else}
+        {#each newData as ques, i (ques.content_id)}
+          <button on:click={() => dispatch("jumpTo", ques.id)}>
+            <li class="d-flex gap-3 align-items-center btn">
+              <div class="float-start btn-sm btn-secondary rounded-circle">
+                {ques.id + 1}
+              </div>
+              <div class="d-flex flex-column gap-1 align-items-start">
+                <p
+                  class="{`${
+                    questionNumber === ques.id
+                      ? 'text-primary'
+                      : 'text-secondary'
+                  }`}  m-0 text-start fw-bold"
                 >
-                  Attempted
-                </span>
-              {:else}
-                <span
-                  class="rounded-pill btn btn-sm small text-warning border-warning"
-                >
-                  Unattempted
-                </span>
-              {/if}
-            </div>
-          </li>
-        </button>
-      {/each}
+                  {ques.snippet}[061bF]
+                </p>
+                {#if ques.attempted || (results[i]?.id && filter === "all")}
+                  <span
+                    class="rounded-pill btn btn-sm small text-success border-success"
+                  >
+                    Attempted
+                  </span>
+                {:else}
+                  <span
+                    class="rounded-pill btn btn-sm small text-warning border-warning"
+                  >
+                    Unattempted
+                  </span>
+                {/if}
+              </div>
+            </li>
+          </button>
+        {/each}
+      {/if}
     </ul>
   </div>
 </div>

@@ -94,8 +94,8 @@
                 </p>
               </div>
             </div>
-            <div class="d-flex justify-content-between w-25">
-              <div class="btn-group gap-1 text-uppercase w-50">
+            <div class="d-flex justify-content-between w-25 corr">
+              <div class="btn-group gap-1 text-uppercase w-50 ">
                 {#each ques.content_text.answers as ans, index (ans.id)}
                   <span
                     class="rounded px-1 border text-secondary {`${
@@ -111,7 +111,7 @@
                   <div class="p-1 rounded border fw-bold text-secondary">c</div>
                   <div class="p-1 rounded border fw-bold text-secondary">d</div> -->
               </div>
-              <div class="w-50 text-center">
+              <div class="w-50 text-center m-auto ">
                 {#if results[i]}
                   {#if results[i].is_correct === "1"}
                     <span class="text-success badge border border-success"
@@ -167,5 +167,13 @@
   }
   p {
     font-size: 90%;
+  }
+  .corr{
+    font-size: 80%;
+  }
+  @media (min-width:1100px){
+    .corr{
+      font-size: 100%;
+    }
   }
 </style>

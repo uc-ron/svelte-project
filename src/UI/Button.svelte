@@ -26,4 +26,11 @@
     bottom: 20px;
     right: 30px;
   }
+  @media (max-width:850px){
+   
+    .btn{
+      font-size: 80% !important;
+      min-width: 20px !important;
+    }
+  }
 </style>

@@ -68,4 +68,10 @@
   p {
     font-weight: 400;
   }
+
+  @media (max-width:1050px){
+    p{
+      font-size: 95%;
+    }
+  }
 </style>

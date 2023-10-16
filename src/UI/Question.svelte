@@ -9,7 +9,7 @@
 </script>
 
 <p>{question.question}</p>
-<div class="d-flex flex-column align-items-start gap-2 w-75">
+<div class="d-flex flex-column align-items-start gap-2 w-75 ques">
   {#each question.answers as ans, i (ans.answer)}
     <Radio
       on:userInput
@@ -23,8 +23,3 @@
   {/each}
 </div>
 
-<style>
-  p {
-    font-size: 1.25em;
-  }
-</style>
